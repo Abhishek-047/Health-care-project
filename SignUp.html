@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +9,8 @@
 
   <style>
     * {
-      margin: 0; padding: 0;
+      margin: 0;
+      padding: 0;
       box-sizing: border-box;
       font-family: 'Poppins', sans-serif;
     }
@@ -18,15 +20,15 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://www.opentext.com/assets/images/products-solutions/solution-industry-category/opentext-image-ov-healthcare-en.jpg') center/cover no-repeat;
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://www.opentext.com/assets/images/products-solutions/solution-industry-category/opentext-image-ov-healthcare-en.jpg') center/cover no-repeat;
     }
 
     .login-box {
       background: rgba(255, 255, 255, 0.15);
-      
+
       padding: 40px;
       border-radius: 20px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
       width: 350px;
       text-align: center;
       color: #fff;
@@ -50,7 +52,7 @@
 
     .login-box input[type="text"],
     .login-box input[type="password"] {
-      background: rgba(255,255,255,0.2);
+      background: rgba(255, 255, 255, 0.2);
       color: #fff;
     }
 
@@ -68,12 +70,12 @@
       font-weight: 600;
       font-size: 1rem;
       cursor: pointer;
-      
+
     }
 
     .login-box button:hover {
       background: #009a65;
-      
+
     }
 
     .login-box p {
@@ -91,7 +93,18 @@
       text-decoration: underline;
     }
 
-  
+    .login-box {
+      opacity: 0;
+      transform: translateY(25px);
+      animation: fadeUp 1s ease-out forwards;
+    }
+
+    @keyframes fadeUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
   </style>
 </head>
 
@@ -99,13 +112,14 @@
   <div class="login-box">
     <h2>Create Account ✨</h2>
     <form>
-        <input type="text" placeholder="Full Name" required>
-        <input type="email" placeholder="Email" required>
-        <input type="password" placeholder="Password" required>
-        <button type="submit">Sign Up</button>
+      <input type="text" placeholder="Full Name" required>
+      <input type="email" placeholder="Email" required>
+      <input type="password" placeholder="Password" required>
+      <button type="submit">Sign Up</button>
     </form>
-    
-    
+
+
   </div>
 </body>
+
 </html>
